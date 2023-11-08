@@ -21,6 +21,11 @@ print(type('hello'))
 # else:
 #     print(f"you cannot vote")
 
+length= 4.5
+
+print(f"area of sqaure of {length*length}")
+
+
 _st='hello world'
 
 for i in _st:
@@ -54,3 +59,5 @@ for i in lis:
 inte=int(''.join(s)) 
 
 print(type(inte))
+
+
