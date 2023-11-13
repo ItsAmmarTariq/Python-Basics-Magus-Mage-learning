@@ -126,27 +126,47 @@
 
 #private access modifiers
 
-class Student:
-    __name=None
-    __age=None
-    __roll=None
+# class Student:
+#     __name=None
+#     __age=None
+#     __roll=None
 
-    def __init__(self,name,age,roll):
-        self.__name=name
-        self.__age=age
-        self.__roll=roll
+#     def __init__(self,name,age,roll):
+#         self.__name=name
+#         self.__age=age
+#         self.__roll=roll
 
-    def __displaydetails(self):
-        print('name :',self.__name)
-        print('name :',self.__age)
-        print('name :',self.__roll)
+#     def __displaydetails(self):
+#         print('name :',self.__name)
+#         print('name :',self.__age)
+#         print('name :',self.__roll)
 
-    def accessprivateDetails(self):
-        self.__displaydetails()
+#     def accessprivateDetails(self):
+#         self.__displaydetails()
 
 
-obj=Student('Ammar Tariq',23,'fa19-bse-065')
-obj.accessprivateDetails()
+# obj=Student('Ammar Tariq',23,'fa19-bse-065')
+# obj.accessprivateDetails()
 
-# #name mangling
-print(obj._Student__name)
+# # #name mangling
+# print(obj._Student__name)
+
+
+# copy constructor in python
+
+import copy
+
+class MyClass:
+    def __init__(self, param1, param2):
+        self.attribute1 = param1
+        self.attribute2 = param2
+
+# Creating an instance of MyClass
+obj1 = MyClass("value1", "value2")
+
+# Using the copy method from the copy module for a shallow copy
+obj2 = copy.copy(obj1)
+
+# Accessing attributes of the copied object
+print(obj2.attribute1)
+print(obj2.attribute2)
