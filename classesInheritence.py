@@ -154,19 +154,47 @@
 
 # copy constructor in python
 
-import copy
+# import copy
+
+# class MyClass:
+#     def __init__(self, param1, param2):
+#         self.attribute1 = param1
+#         self.attribute2 = param2
+
+# # Creating an instance of MyClass
+# obj1 = MyClass("value1", "value2")
+
+# # Using the copy method from the copy module for a shallow copy
+# obj2 = copy.copy(obj1)
+
+# # Accessing attributes of the copied object
+# print(obj2.attribute1)
+# print(obj2.attribute2)
+
+
+class City:
+    def __init__(this):
+        this.name='Ammar'
+        this.price='*0903094093094304'
+    
+    def show(this):
+        print(this.name)
+        print(this.price)
+    
+
+c=City()
+print(c.name)
+c.show()
 
 class MyClass:
-    def __init__(self, param1, param2):
-        self.attribute1 = param1
-        self.attribute2 = param2
+    def __init__(self, value):
+        self.value = value
 
-# Creating an instance of MyClass
-obj1 = MyClass("value1", "value2")
+    def print_value(self, prefix):
+        print(f"{prefix}: {self.value}")
 
-# Using the copy method from the copy module for a shallow copy
-obj2 = copy.copy(obj1)
+# Create an object
+obj = MyClass(42)
 
-# Accessing attributes of the copied object
-print(obj2.attribute1)
-print(obj2.attribute2)
+# Call the method; you don't explicitly pass the instance
+obj.print_value("The value is")
