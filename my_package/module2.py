@@ -1,7 +1,7 @@
 # module1.py
-def function1():
-    print("Function 1 from module2")
+def mod():
+    print("module 2")
 
 # module2.py
-def function2():
-    print("Function 2 from module2")
+# def function2():
+#     print("Function 2 from module2")

@@ -138,9 +138,9 @@
 # sizes=list(map(int,input().split()))
 # print(sizes)
 
-# customer=int(input())
-# customers_request=[tuple(map(int,input().split())) for _ in range(customer)]
-# print(customers_request)
+customer=int(input())
+customers_request=[tuple(map(int,input().split())) for _ in range(customer)]
+print(customers_request)
     
 # n = int(input())
 # arr = map(int, input().split())
@@ -150,10 +150,4 @@
 # unique_score.remove(maxx)
 # print(max(unique_score))
 
-for n in range(2,100):
-    for x in range(2,100):
-        if n%x==0:
-            print(n,'equals', x ,'*',n//x)
-            break
-    else:
-      print(n,'is a prime number')
+

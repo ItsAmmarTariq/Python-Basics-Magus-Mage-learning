@@ -198,5 +198,5 @@ obj = MyClass(42)
 
 # Call the method; you don't explicitly pass the instance
 obj.print_value("The value is")
-print(dir(5))
+
 

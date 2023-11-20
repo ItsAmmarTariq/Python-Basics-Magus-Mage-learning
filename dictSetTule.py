@@ -1,3 +1,6 @@
+import numpy as np
+
+
 likes = {"color": "blue", "fruit": "apple", "pet": "dog"}
 
 for key in likes:
