@@ -1,4 +1,4 @@
-import numpy as np
+
 
 
 likes = {"color": "blue", "fruit": "apple", "pet": "dog"}
@@ -56,5 +56,7 @@ a={'a':1,'b':2,'c':3,'d':4}
 keys_rm=['c','d']
 
 print(remdict(a,keys_rm))
+
+
 
 
