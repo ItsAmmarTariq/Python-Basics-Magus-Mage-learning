@@ -102,10 +102,8 @@ sum_of_numbers=(reduce(custom_sum,sum_num))
 # to three decimal places
 my_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]
 
-def find_square(num):
-    return round(num**2,3)
 
-res3_digit=list(map(find_square,my_floats))
+res3_digit=list(map(lambda x:round(x**2,3),my_floats))
 print(res3_digit)
 
 # Use filter to print only the names that are less than 
