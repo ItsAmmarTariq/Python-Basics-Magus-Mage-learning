@@ -138,9 +138,9 @@
 # sizes=list(map(int,input().split()))
 # print(sizes)
 
-customer=int(input())
-customers_request=[tuple(map(int,input().split())) for _ in range(customer)]
-print(customers_request)
+# customer=int(input())
+# customers_request=[tuple(map(int,input().split())) for _ in range(customer)]
+# print(customers_request)
     
 # n = int(input())
 # arr = map(int, input().split())
@@ -151,3 +151,17 @@ print(customers_request)
 # print(max(unique_score))
 
 
+#decorator 
+
+def outerfunc(func):
+    def inner(number):
+        print('argument for ',func.__name__,"is",number)
+        return func(number)
+    return inner
+
+
+@outerfunc
+def add_one(x):
+    return x+1
+
+print(add_one(1))
