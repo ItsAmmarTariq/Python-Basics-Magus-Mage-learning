@@ -66,3 +66,16 @@ matches2=re.findall(patterns2,text2)
 print(matches2)
 
 # result ===> ['Overview', 'Summary of Significant Accounting Policies']
+
+text3="""
+For example, financial year 2024 is the 12-month 
+period ending on 30 June 2024 and can be referred to as FY2023 Q1
+FY2024 Q4 but leadds to FY2025 Q5.
+
+"""
+
+patterns3='FY\d{4} Q[1-4]'
+
+matches23=re.findall(patterns3,text3)
+
+print(matches23)
