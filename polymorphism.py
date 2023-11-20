@@ -47,22 +47,22 @@ if any thing walk like a duck, swim or behve like a duck then its duck '''
 
 # optr overiding
 
-class A:
-    def __init__(self,x):
-        self.x=x
+# class A:
+#     def __init__(self,x):
+#         self.x=x
     
-    def __add__(self,other):
-        return self.x + other.x
+#     def __add__(self,other):
+#         return self.x + other.x
     
    
-class B:
-    def __init__(self,x):
-        self.x=x
+# class B:
+#     def __init__(self,x):
+#         self.x=x
     
     
 
 
-a=A(100)
-b=B(20)
-print(a+b)
+# a=A(100)
+# b=B(20)
+# print(a+b)
 
