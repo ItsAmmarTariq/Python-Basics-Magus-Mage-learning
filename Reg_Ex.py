@@ -67,15 +67,62 @@ print(matches2)
 
 # result ===> ['Overview', 'Summary of Significant Accounting Policies']
 
-text3="""
-For example, financial year 2024 is the 12-month 
-period ending on 30 June 2024 and can be referred to as FY2023 Q1
-FY2024 Q4 but leadds to FY2025 Q5.
+# text3="""
+# For example, financial year 2024 is the 12-month 
+# period ending on 30 June 2024 and can be referred to as FY2023 Q1
+# FY2024 Q4 but leadds to FY2025 Q5.
 
-"""
+# """
 
-patterns3='FY\d{4} Q[1-4]'
+# patterns3='FY\d{4} Q[1-4]'
 
-matches23=re.findall(patterns3,text3)
+# matches23=re.findall(patterns3,text3)
 
-print(matches23)
+# print(matches23)
+
+
+# text_Dollar="""For example, financial year 2024 is the 12-month 
+# period ending on 30 June 2024 and can be $4.5666 billion referred to as FY2023 Q1
+# FY2024 Q4 but leadds to FY2025 Q5 be $2.7 billion."""
+# patt='\$[0-9\.]*'
+
+# doll=re.findall(patt,text_Dollar)
+# print(doll)
+
+
+tweet='''
+
+
+
+Follow our leader Elon musk on twitter here: https://twitter.com/elonmusk, more information 
+on Tesla's products can be found at https://www.tesla.com/. Also here are leading influencers 
+for tesla related news,
+https://twitter.com/teslarati
+https://twitter.com/dummy_tesla
+https://twitter.com/dummy_2_tesla
+'''
+
+
+
+patterns='https:\S\Stwitter.com\S([a-z|A-Z|1-9|_)]+)'
+
+matches=re.findall(patterns,tweet)
+print(matches)
+
+types= '''
+Concentration of Risk: Credit Risk
+Financial instruments that potentially subject us to a concentration of credit risk consist of cash, cash equivalents, marketable securities,
+restricted cash, accounts receivable, convertible note hedges, and interest rate swaps. Our cash balances are primarily invested in money market funds
+or on deposit at high credit quality financial institutions in the U.S. These deposits are typically in excess of insured limits. As of September 30, 2021
+and December 31, 2020, no entity represented 10% or more of our total accounts receivable balance. The risk of concentration for our convertible note
+hedges and interest rate swaps is mitigated by transacting with several highly-rated multinational banks.
+Concentration of Risk: Supply Risk
+We are dependent on our suppliers, including single source suppliers, and the inability of these suppliers to deliver necessary components of our
+products in a timely manner at prices, quality levels and volumes acceptable to us, or our inability to efficiently manage these components from these
+suppliers, could have a material adverse effect on our business, prospects, financial condition and operating results.
+'''
+
+types_pattern='Concentration of Risk: ([A-Z|a-z  |1-9]*)'
+
+types_matches=re.findall(types_pattern,types)
+print(types_matches)
