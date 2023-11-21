@@ -126,3 +126,24 @@ types_pattern='Concentration of Risk: ([A-Z|a-z  |1-9]*)'
 
 types_matches=re.findall(types_pattern,types)
 print(types_matches)
+
+
+product_text="""
+
+Product: Laptop_2021 Code: 12345678 Price: $899.99
+Product: Mouse-2022   Code: 98765432 Price: $15
+Product: Keyboard_001 Code: 87654321 Price: $29.95
+Product: Monitor-XYZ  Code: 13579024 Price: $399.50
+Product: Smartphone-7 Code: 24680135 Price: $599.99
+Product: Headphones42 Code: 11223344 Price: $49.99
+Product: Camera_XYZ   Code: 55443322 Price: $199.75
+Product: Printer_2023 Code: 77889900 Price: $129.50
+Product: Tablet-A1    Code: 33221100 Price: $199
+Product: Speaker-3    Code: 66554433 Price: $79.99
+"""
+
+product_pattern='Product: ([A-Z|a-z|\S]) |Code: ([0-9]) Price: ($[0-9.]*)'
+
+product_match=re.findall(product_pattern,product_text)
+
+print(product_match)
