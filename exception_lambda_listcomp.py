@@ -174,13 +174,35 @@
 #     print('An exception flew by!')
 #     raise
 
-try:
-    raise TypeError('bad type')
-except Exception as e:
-    e.add_note('Add some information')
-    e.add_note('Add some more information')
-    raise
-try:
-    raise KeyboardInterrupt
-finally:
-    print('Goodbye, world!')
+# try:
+#     raise TypeError('bad type')
+# except Exception as e:
+#     e.add_note('Add some information')
+#     e.add_note('Add some more information')
+#     raise
+# try:
+#     raise KeyboardInterrupt
+# finally:
+#     print('Goodbye, world!')
+
+people = [
+    {'name': 'Alice', 'age': 25, 'salary': 60000},
+    {'name': 'Bob', 'age': 35, 'salary': 45000},
+    {'name': 'Charlie', 'age': 40, 'salary': 80000},
+    {'name': 'David', 'age': 28, 'salary': 55000},
+    {'name': 'Eva', 'age': 45, 'salary': 48000},
+]
+# using list comprehension
+# filtered_list=[person for person in people if person['age']>25 and person['salary']<50000]
+# now using the lambda function with filter
+listed=list(filter(lambda x:x['age']>25 and x['salary']<50000,people))
+
+for person in listed:
+    name=person['name']
+    age=person['age']
+    salary=person['salary']
+    
+    print(f'{name}\'s age is {age} and salary is {salary} ')
+
+# print(f"bob`s  age is {people[1]['age']}")
+
