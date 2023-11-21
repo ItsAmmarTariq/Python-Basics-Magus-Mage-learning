@@ -8,19 +8,19 @@ https://regex101.com/
 """
 
 import re
-# text="""
-# companies owner phone number is 
-# 233345545
+text="""
+companies owner phone number is 
+233345545
 
-# Tesla2s CFO # (999)-333-777
+Tesla2s CFO # (999)-333-777
 
-# call him if you have any questions
-# """
+call him if you have any questions
+"""
 
-# patterns='\(\d{3}\)-\d{3}-\d{3}|\d{9}'
+patterns_phone='\(\d{3}\)-\d{3}-\d{3}|\d{9}'
 
-# matches=re.findall(patterns,text)
-# print(matches)
+matches=re.findall(patterns_phone,text)
+print(matches)
 # result===> (999)-333-777  233345545
 
 
@@ -67,27 +67,27 @@ print(matches2)
 
 # result ===> ['Overview', 'Summary of Significant Accounting Policies']
 
-# text3="""
-# For example, financial year 2024 is the 12-month 
-# period ending on 30 June 2024 and can be referred to as FY2023 Q1
-# FY2024 Q4 but leadds to FY2025 Q5.
+text3="""
+For example, financial year 2024 is the 12-month 
+period ending on 30 June 2024 and can be referred to as FY2023 Q1
+FY2024 Q4 but leadds to FY2025 Q5.
 
-# """
+"""
 
-# patterns3='FY\d{4} Q[1-4]'
+patterns3='FY\d{4} Q[1-4]'
 
-# matches23=re.findall(patterns3,text3)
+matches23=re.findall(patterns3,text3)
 
-# print(matches23)
+print(matches23)
 
 
-# text_Dollar="""For example, financial year 2024 is the 12-month 
-# period ending on 30 June 2024 and can be $4.5666 billion referred to as FY2023 Q1
-# FY2024 Q4 but leadds to FY2025 Q5 be $2.7 billion."""
-# patt='\$[0-9\.]*'
+text_Dollar="""For example, financial year 2024 is the 12-month 
+period ending on 30 June 2024 and can be $4.5666 billion referred to as FY2023 Q1
+FY2024 Q4 but leadds to FY2025 Q5 be $2.7 billion."""
+patt='\$[0-9\.]*'
 
-# doll=re.findall(patt,text_Dollar)
-# print(doll)
+doll=re.findall(patt,text_Dollar)
+print(doll)
 
 
 tweet='''
