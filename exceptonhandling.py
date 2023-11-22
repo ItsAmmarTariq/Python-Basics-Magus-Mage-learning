@@ -23,6 +23,37 @@
 # finally:
 #     print('hi from final')
 
+"""
+NESTED TRY CATCH
+"""
+try:
+    1/0
+    try:
+        # Inner try block
+        x = int(input("Enter a number: "))
+        result = 10 / 0
+        print("Result:", result)
+    
+    except ValueError:
+        print("Inner: Please enter a valid number.")
+    
+    except ZeroDivisionError:
+        print("Inner: Cannot divide by zero.")
+    
+    else:
+        print("Inner: No exceptions in the inner try block.")
+    
+    finally:
+        print("Inner: This is always executed in the inner try block.")
+
+except Exception as e:
+    print("Outer: An error occurred in the outer try block:", e)
+
+else:
+    print("Outer: No exceptions in the outer try block.")
+
+finally:
+    print("Outer: This is always executed in the outer try block.")
 
 
 # try:
@@ -33,20 +64,20 @@
 #     print("This will always be executed")
 
 
-class Father:
-    def __init__(self):
-        print("Father's constructor")
+# class Father:
+#     def __init__(self):
+#         print("Father's constructor")
 
-class Mother:
-    def __init__(self):
-        print("Mother's constructor")
+# class Mother:
+#     def __init__(self):
+#         print("Mother's constructor")
 
-class Child(Mother, Father):
-    def __init__(self):
-        Father.__init__(self)  # Call Father's constructor
-        super().__init__()  # Call Mother's constructor
+# class Child(Mother, Father):
+#     def __init__(self):
+#         Father.__init__(self)  # Call Father's constructor
+#         super().__init__()  # Call Mother's constructor
 
-# Create an instance of Child
-child = Child()
+# # Create an instance of Child
+# child = Child()
 
 
