@@ -48,7 +48,7 @@ def cal_cube(numbers):
 if __name__=='__main__':
     url='https://source.unsplash.com/random'
     pros=[]
-    for i in range(25):
+    for i in range(2):
         p=multiprocessing.Process(target=downloadimage,args=(url,i,))
         p.start()
         pros.append(p)
@@ -63,6 +63,9 @@ if __name__=='__main__':
     q=multiprocessing.Queue()
     p1=multiprocessing.Process(target=add_balance,args=(balancec_value,lock))
     p2=multiprocessing.Process(target=withdraw_balance,args=(balancec_value,lock))
+
+    for i in pros:
+        i.join()
 
  
 
