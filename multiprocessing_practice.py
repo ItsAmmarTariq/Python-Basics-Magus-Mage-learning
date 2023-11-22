@@ -1,5 +1,17 @@
 import time
 import multiprocessing
+import requests
+
+def downloadimage(url,name):
+    print(f'started download {name}')
+    respopnse=requests.get(url)
+    open(f'files/{name}.jpg','wb').write(respopnse.content)
+    print(f'finished downloaded {name}')
+
+    
+
+   
+
 
 
 
@@ -34,6 +46,13 @@ def cal_cube(numbers):
         
 
 if __name__=='__main__':
+    url='https://source.unsplash.com/random'
+    pros=[]
+    for i in range(25):
+        p=multiprocessing.Process(target=downloadimage,args=(url,i,))
+        p.start()
+        pros.append(p)
+   
     numbers=[2,3,7,8,6]
 
     balancec_value=multiprocessing.Value('i',200)
@@ -45,13 +64,9 @@ if __name__=='__main__':
     p1=multiprocessing.Process(target=add_balance,args=(balancec_value,lock))
     p2=multiprocessing.Process(target=withdraw_balance,args=(balancec_value,lock))
 
-    p1.start()
-    p2.start()
+ 
 
-    p1.join()
-    p2.join()
-
-    print(balancec_value.value) 
+    # print(balancec_value.value) 
     # print(result[:])
     # print(v.value)
     # while q.empty() is False:
