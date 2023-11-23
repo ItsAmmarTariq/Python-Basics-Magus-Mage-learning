@@ -1,16 +1,21 @@
+import multiprocessing
 import time
 import threading
 import concurrent.futures
 
+res=[]
 def cal_square_and_cube(numbers):
     for i in numbers:
         print('Calculating square numbers')
         time.sleep(0.2)
-        print('square', i*i)
+        s_result=i*i
+        res.append(s_result)
+        print('square', s_result)
 
         print('Calculating cube numbers')
         time.sleep(0.2)
         print('cube', i*i*i)
+        return res
 
 def threaded_functions():
     threads = []
@@ -43,10 +48,11 @@ if __name__ == "__main__":
     arr = [2, 3, 5, 8]
 
     # Uncomment the functions you want to run
-
-    # cal_square_and_cube(arr)
+    
+    
+    # print(p)
     # threaded_functions()
-    concurrent_futures_functions()
-    # ...
-
+    # concurrent_futures_functions()
+    # print(threading.active_count())
+   
     print('I have completed my tasks')
