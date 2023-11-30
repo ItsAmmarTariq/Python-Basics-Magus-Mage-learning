@@ -1,0 +1,16 @@
+INFO:root:result 10 + 5 = 15 
+INFO:root:result 10 - 5 = 5 
+INFO:root:result 10 * 5 = 50 
+INFO:root:result 10 / 5 = 2.0 
+INFO:root:result 20 + 5 = 25 
+INFO:root:result 20 - 5 = 15 
+INFO:root:result 20 * 5 = 100 
+INFO:root:result 20 / 5 = 4.0 
+root :: INFO :: result 20 + 5 = 25 
+root :: INFO :: result 20 - 5 = 15 
+root :: INFO :: result 20 * 5 = 100 
+root :: INFO :: result 20 / 5 = 4.0 
+root :: INFO :: result 20 + 5 = 25 
+root :: INFO :: result 20 - 5 = 15 
+root :: INFO :: result 20 * 5 = 100 
+root :: INFO :: result 20 / 5 = 4.0 
