@@ -43,8 +43,8 @@ print(fruits)
 for fruit in fruits.copy():
     if fruits[fruit]>=26:
         del fruits[fruit]
-
-print(fruit)
+        
+        print(fruit)
 
 def remdict(dict,keys):
     for kye in keys:
